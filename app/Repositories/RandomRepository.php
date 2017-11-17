@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Repositories;
+use App\Repositories\Contracts\RandomRepositoryInterface;
 
-class RandomRepository
+class RandomRepository implements RandomRepositoryInterface
 {
 	public function magic()
 	{

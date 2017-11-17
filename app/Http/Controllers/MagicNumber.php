@@ -10,7 +10,7 @@ class MagicNumber extends Controller
 {
 	protected $generator;
 
-	public function __construct(RandomRepository $generator)
+	public function __construct(RandomRepositoryInterface $generator)
 	{
 		$this->generator = $generator;
 	}
