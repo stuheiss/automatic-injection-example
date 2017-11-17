@@ -8,8 +8,15 @@ use App\Repositories\Contracts\RandomRepositoryInterface;
 
 class MagicNumber extends Controller
 {
+	protected $generator;
+
+	public function __construct(RandomRepository $generator)
+	{
+		$this->generator = $generator;
+	}
+
     public function index()
     {
-    	return rand(0, 100);
+    	return $this->generator->magic();
     }
 }
