@@ -14,9 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::get('/magic', 'MagicNumber@index');
-Route::get('/magic', function () {
-	$generator = new App\Repositories\RandomRepository;
-	$controller = new App\Http\Controllers\MagicNumber($generator);
-	return $controller->index();
-});
+Route::get('/foo', 'Foobarzip@index');
+Route::get('/magic', 'MagicNumber@index');
+
+// Route::get('/magic', function () {
+// 	$generator = new App\Repositories\RandomRepository;
+// 	$controller = new App\Http\Controllers\MagicNumber($generator);
+// 	return $controller->index();
+// });
