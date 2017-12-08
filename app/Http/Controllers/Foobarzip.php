@@ -25,9 +25,20 @@ class Foobarzip extends Controller
 	{
 		$this->foo = $foo;
 	}
+    /*
+     * get a Bar instance from Foo and return result of a method call on Bar
+     */
     public function index()
     {
     	// expect "foobarzip"
     	return $this->foo->getBarInstance()->getFoobarzip();
+    }
+    /*
+     * get result of method call on Foo that returns result of a method call on Bar
+     */
+    public function index2()
+    {
+        // expect "foobarbazqux"
+    	return $this->foo->getFoobarbazquxFromBar();
     }
 }

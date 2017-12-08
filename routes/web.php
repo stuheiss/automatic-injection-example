@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/foo', 'Foobarzip@index');
+Route::get('/baz', 'Foobarzip@index2');
 Route::get('/magic', 'MagicNumber@index');
 
 // Route::get('/magic', function () {

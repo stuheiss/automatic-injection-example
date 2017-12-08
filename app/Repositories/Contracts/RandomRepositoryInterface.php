@@ -4,5 +4,5 @@ namespace App\Repositories\Contracts;
 
 interface RandomRepositoryInterface
 {
-	public function magic();
+    public function magic();
 }
