@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('/foo', 'Foobarzip@index');
 Route::get('/baz', 'Foobarzip@index2');
 Route::get('/magic', 'MagicNumber@index');
+Route::get('/foo1', 'Foo1@index');
 
 // Route::get('/magic', function () {
 // 	$generator = new App\Repositories\RandomRepository;
