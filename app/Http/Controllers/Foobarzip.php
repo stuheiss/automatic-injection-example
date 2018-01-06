@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\Foo;
+use App\Repositories\Baz;
 
 /*
 	Demo multiple automatic injection. All injected dependencies are resolved by type hinting. Laravel's IoC uses reflection to figure out what concrete class instance to inject given a type hint.
@@ -40,5 +41,13 @@ class Foobarzip extends Controller
     {
         // expect "foobarbazqux"
     	return $this->foo->getFoobarbazquxFromBar();
+    }
+    /*
+     * get result of method call on Foo that returns results of method call on Baz
+     * Note: index3 will be automatically injected an instance of Baz
+     */
+    public function index3(Baz $baz)
+    {
+        return $baz->index();
     }
 }

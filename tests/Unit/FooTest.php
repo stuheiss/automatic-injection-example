@@ -9,6 +9,7 @@ use App\Repositories\Bar;
 
 class FooTest extends TestCase
 {
+    protected $foo;
     public function setup()
     {
         $this->foo = new Foo(new Bar);
